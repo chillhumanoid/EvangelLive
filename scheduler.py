@@ -1,5 +1,6 @@
 import curses, time, sys
 from utilities import menu as m
+import sunday
 def start(stdscr):
     cursor_x = 1
     cursor_y = 1
@@ -47,8 +48,7 @@ def start(stdscr):
             if cursor_y == 4:
                 cursor_y = 1
         elif k == ord('1') or (k == 10 and cursor_y == 1):
-            print("SUNDAY MORNING")
-            time.sleep(1)
+            sunday.start()
         elif k == ord('2') or (k == 10 and cursor_y == 2):
             print("WEDNESDAY NIGHT")
             time.sleep(1)
