@@ -1,7 +1,7 @@
 import curses, time, sys
 from utilities import menu as m
 import sunday
-def start(stdscr):
+def menudisplay(stdscr):
     cursor_x = 1
     cursor_y = 1
     k = 0
@@ -57,5 +57,9 @@ def start(stdscr):
 
 
 
+def start():
+    curses.wrapper(menudisplay)
 
-curses.wrapper(start)
+if __name__ == '__main__':
+    print("HELLO")
+    start()
